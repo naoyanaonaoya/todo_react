@@ -48,6 +48,8 @@ button {
   border-radius: 20px;
 }
 button {
+  /* background-color: #ebebeb; */
+  border: solid #ffffff;
   transition: 1s;
 }
 /* button {
@@ -60,6 +62,11 @@ button {
 } */
 button:hover {
   background-color: #ff77ff;
+}
+button:focus {
+  /* background-color: #ff77ff; */
+  border: solid;
+  border-color: #ff77ff;
 }
 ul {
   list-style: none;
