@@ -1,11 +1,13 @@
 html {
-  min-height: 100%;
+  height: 100%;
   position: relative;
 }
 
 body {
   color: #000000;
   background-color: #ffffff;
+  width: 100%;
+  height: 100%;
 }
 
 .wrapper {
@@ -17,7 +19,8 @@ header {
   font-weight: 600;
   background-color: #6ceae7;
   color: #ffffff;
-  height: 50px;
+  min-height: 50px;
+  height: auto;
   line-height: 50px;
   text-align: center;
   border-radius: 0 0 10px 10px;
@@ -79,6 +82,7 @@ li {
   justify-content: space-around;
   background-color: aqua;
   min-height: 50px;
+  height: auto;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
@@ -86,6 +90,7 @@ li {
 .incomplete-area {
   background-color: aquamarine;
   min-height: 200px;
+  height: auto;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
@@ -98,6 +103,7 @@ li {
 .complete-area {
   background-color: beige;
   min-height: 200px;
+  height: auto;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
@@ -164,11 +170,14 @@ li {
     background-color: #f5587b;
   }
   header {
-    min-height: 150px;
+    display: block;
+    min-height: 50px;
+    height: auto;
   }
   .input-area {
     display: flex;
     flex-flow: column;
-    min-height: 150px;
+    /* min-height: 50px; */
+    /* height: auto; */
   }
 }

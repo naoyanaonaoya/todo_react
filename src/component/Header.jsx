@@ -4,9 +4,7 @@ const Header = () => {
   return (
     <React.Fragment>
       <header className="wrapper">
-        <div>
-          <p>hello, this is TODO application</p>
-        </div>
+        <p>hello, this is TODO application</p>
       </header>
     </React.Fragment>
   );

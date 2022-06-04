@@ -27,7 +27,6 @@ function App() {
   ]);
   const [completeTodos, setCompleteTodos] = useState([]);
   // const [today, setToday] = useState("");
-
   const onChangeTodoText = (event) => {
     // eventが起きた場所のtargetのvalueを取り出す
     // console.log(event.target.value);
@@ -46,6 +45,31 @@ function App() {
     if (todoText.text === "" || todoText.deadline === "") {
       return;
     }
+
+    let incompleteTodos_len = Object.keys(incompleteTodos).length;
+    // console.log(object_len);
+    let flag_number = 0;
+    let regexp = RegExp(`${todoText.text}`);
+    // console.log(regexp);
+    for (let index = 0; index < incompleteTodos_len; index++) {
+      // console.log(incompleteTodos[index].text);
+      if (regexp.test(incompleteTodos[index].text)) {
+        // console.log("ok");
+        flag_number = flag_number + 1;
+      }
+    }
+    let completeTodos_len = Object.keys(completeTodos).length;
+    for (let index = 0; index < completeTodos_len; index++) {
+      // console.log(incompleteTodos[index].text);
+      if (regexp.test(completeTodos[index].text)) {
+        // console.log("ok");
+        flag_number = flag_number + 1;
+      }
+    }
+    // console.log(flag_number);
+    if (flag_number !== 0) {
+      todoText.text = `${todoText.text}(${flag_number})`;
+    }
     const newIncompleteTodos = [...incompleteTodos, todoText];
     const newIncompleteTodosSorted = newIncompleteTodos.sort(function (a, b) {
       return a.deadline < b.deadline ? -1 : 1;
@@ -56,9 +80,15 @@ function App() {
 
   // 今日の日付を返す関数
   const returnToday = () => {
-    const year = new Date().getFullYear();
-    const month = new Date().getMonth() + 1;
-    const date = new Date().getDate();
+    let year = new Date().getFullYear();
+    let month = new Date().getMonth() + 1;
+    let date = new Date().getDate();
+    if (month < 10) {
+      month = `0${month}`;
+    }
+    if (date < 10) {
+      date = `0${date}`;
+    }
     const todayString = `${year}-${month}-${date}`;
     return todayString;
   };
