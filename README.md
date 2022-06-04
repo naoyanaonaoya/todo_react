@@ -4,6 +4,9 @@
   - 定義する位置の変更で解消
   - https://stackoverflow.com/questions/68014046/warning-each-child-in-a-list-should-have-a-unique-key-prop-but-i-have-key-pro
 
+# site URL
+- https://todo-react-naoya.netlify.app
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
