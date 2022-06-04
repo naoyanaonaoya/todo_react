@@ -3,6 +3,11 @@ html {
   position: relative;
 }
 
+body {
+  color: #000000;
+  background-color: #ffffff;
+}
+
 .wrapper {
   max-width: 600px;
   margin: 0 auto;
@@ -30,14 +35,26 @@ footer {
   margin: 0 auto;
 }
 
+input,
 button {
   background-color: #ffffff;
+  height: 40px;
+  display: block;
+  margin: 5px 5px;
+  padding: 5px 20px;
+  border-radius: 20px;
+}
+button {
+  transition: 1s;
+}
+/* button {
+  background-color: #ffffff;
+  height: 40px;
   display: block;
   margin: 5px 10px;
   padding: 5px 20px;
   border-radius: 20px;
-  transition: 1s;
-}
+} */
 button:hover {
   background-color: #ff77ff;
 }
@@ -61,17 +78,10 @@ li {
   display: flex;
   justify-content: space-around;
   background-color: aqua;
-  height: 50px;
+  min-height: 50px;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
-}
-input {
-  background-color: #ffffff;
-  display: block;
-  margin: 5px 5px;
-  padding: 5px 20px;
-  border-radius: 20px;
 }
 .incomplete-area {
   background-color: aquamarine;
@@ -109,4 +119,56 @@ input {
 .title {
   text-align: center;
   font-size: 2em;
+}
+
+/*====================
+スマホを基本設計にする
+- 〜479px：スマートフォン縦
+- 480px〜599px：スマートフォン横
+- 600px〜959px：タブレット
+- 960px〜1279px：小型PC
+- 1280px〜：大型PC
+====================*/
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #000000;
+    background-color: #ebebeb;
+  }
+}
+
+/* @media screen and (min-width: 1280px) {
+  #particles-js {
+    background-color: #b61924;
+  }
+} */
+@media screen and (min-width: 600px) and (max-width: 1279px) {
+  body {
+    background-color: #f5587b;
+  }
+  /* .content {
+    display: none;
+  } */
+}
+@media screen and (min-width: 480px) and (max-width: 599px) {
+  body {
+    background-color: #ff8a5c;
+  }
+  /* .input-area {
+    display: none;
+  } */
+}
+@media screen and (max-width: 480px) {
+  body {
+    /* background-color: #000000; */
+    background-color: #f5587b;
+  }
+  header {
+    min-height: 150px;
+  }
+  .input-area {
+    display: flex;
+    flex-flow: column;
+    min-height: 150px;
+  }
 }
