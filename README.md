@@ -4,7 +4,18 @@
   - 定義する位置の変更で解消
   - https://stackoverflow.com/questions/68014046/warning-each-child-in-a-list-should-have-a-unique-key-prop-but-i-have-key-pro
 
+# 解消すべき問題
+
+- incompletelist で remove をすると、map の key をタスク名にしているため、重複があるタスク名で remove すると、map の key が一意じゃなくなる
+
+# 構造
+
+- netlify で公開
+- 完全にフロントで完結
+- heroku でデータをスクレイピングして、json でフロントに反映させたい
+
 # site URL
+
 - https://todo-react-naoya.netlify.app
 
 # Getting Started with Create React App
