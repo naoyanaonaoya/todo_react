@@ -47,26 +47,43 @@ function App() {
     }
 
     let incompleteTodos_len = Object.keys(incompleteTodos).length;
-    // console.log(object_len);
+    // console.log(incompleteTodos_len);
+
+    // 重複の検索
     let flag_number = 0;
-    let regexp = RegExp(`${todoText.text}`);
+    // todo => ok
+    // 正規表現で検索を一度実装したが、これだとうまく行かない
+    // ex) 最初に"testtest"というタスク名で入力して、次に"test"というタスク名をいれると、重複していないのに重複したと認識される
+    // 完全一致じゃなくて、一部でも一致したら重複だと判定するから
+    // 完全一致で検索する必要がある
+    // しかし完全一致にすると'test(1)'に'test'が引っかからなくなる`
+    // 完全一致と正規表現部分一致(text + (.))(数字一桁対応)の両方を使って、どっちかがtrueになればカウントアップ
+    // todo
+    // incomplete listでremoveをするとカウントアップが不足し、同じ名前のタスク名が発生し、mapのkeyが一意じゃなくなる
+    // どこかでグローバルにこれまでのflag_numberの最大値を保存しておけば、その最大値より小さければ最大値+1を用いれば良い？
+    let regexp = RegExp(`${todoText.text}\(.\)`);
     // console.log(regexp);
     for (let index = 0; index < incompleteTodos_len; index++) {
       // console.log(incompleteTodos[index].text);
-      if (regexp.test(incompleteTodos[index].text)) {
-        // console.log("ok");
+      if (
+        incompleteTodos[index].text === todoText.text ||
+        regexp.test(incompleteTodos[index].text)
+      ) {
+        // console.log("duplicate");
         flag_number = flag_number + 1;
       }
     }
     let completeTodos_len = Object.keys(completeTodos).length;
     for (let index = 0; index < completeTodos_len; index++) {
-      // console.log(incompleteTodos[index].text);
-      if (regexp.test(completeTodos[index].text)) {
-        // console.log("ok");
+      // console.log(completeTodos[index].text);
+      if (
+        completeTodos[index].text === todoText.text ||
+        regexp.test(completeTodos[index].text)
+      ) {
+        // console.log("duplicate");
         flag_number = flag_number + 1;
       }
     }
-    // console.log(flag_number);
     if (flag_number !== 0) {
       todoText.text = `${todoText.text}(${flag_number})`;
     }
