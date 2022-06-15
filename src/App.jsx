@@ -8,6 +8,7 @@ import CompleteTodo from "./component/CompleteTodo";
 
 function App() {
   console.log("test");
+  console.log("text2");
 
   // https://qiita.com/hirochan/items/fe0faed237e47b47f3ca
   const [todoText, setTodoText] = useState({
