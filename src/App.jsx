@@ -64,6 +64,7 @@ function App() {
     // todo
     // incomplete listでremoveをするとカウントアップが不足し、同じ名前のタスク名が発生し、mapのkeyが一意じゃなくなる
     // どこかでグローバルにこれまでのflag_numberの最大値を保存しておけば、その最大値より小さければ最大値+1を用いれば良い？
+    // どうなんやろ？
     let regexp = RegExp(`${todoText.text}\(.\)`);
     // console.log(regexp);
     for (let index = 0; index < incompleteTodos_len; index++) {
