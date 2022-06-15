@@ -7,6 +7,8 @@ import IncompleteTodo from "./component/IncompleteTodo";
 import CompleteTodo from "./component/CompleteTodo";
 
 function App() {
+  console.log("test");
+
   // https://qiita.com/hirochan/items/fe0faed237e47b47f3ca
   const [todoText, setTodoText] = useState({
     text: "",
