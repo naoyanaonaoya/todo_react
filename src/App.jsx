@@ -11,6 +11,7 @@ function App() {
   console.log("text2");
 
   // https://qiita.com/hirochan/items/fe0faed237e47b47f3ca
+  // https://qiita.com/10mi8o/items/896df09ad89e41d48bac
   const [todoText, setTodoText] = useState({
     text: "",
     deadline: "",
