@@ -23,8 +23,8 @@
 
 - main ずっと残す
   - develop ずっと残す
-    - feature/~
-    - hotfix/~
+    - feature/~ 自動で消える
+    - hotfix/~ 自動で消える
 
 # Getting Started with Create React App
 
