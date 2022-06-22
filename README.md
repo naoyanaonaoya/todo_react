@@ -22,7 +22,7 @@
 # branch の切り方
 
 - main
-  - develop
+  - develop ずっと残す
     - feature/~
     - hotfix/~
 
