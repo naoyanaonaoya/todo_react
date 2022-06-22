@@ -21,7 +21,7 @@
 
 # branch の切り方
 
-- main
+- main ずっと残す
   - develop ずっと残す
     - feature/~
     - hotfix/~
