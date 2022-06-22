@@ -15,6 +15,9 @@
 <!-- - heroku でデータをスクレイピングして、json でフロントに反映させたい -->
 - slack に通知を飛ばしている
 - typescript を使いたい
+- firebase でバックエンドの管理
+  - ユーザー認証
+  - ユーザーごとに TODO リスト管理
 
 # site URL
 
