@@ -32,6 +32,7 @@
     - hotfix/~ 自動で消える
 - develop から branch を切る方法が github 上でなら出来るが cui でやる方法がわからない
   - sourcetree からならいける？
+    - いけた
 
 # Getting Started with Create React App
 
