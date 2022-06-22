@@ -13,11 +13,18 @@
 - netlify で公開
 - 完全にフロントで完結
 - heroku でデータをスクレイピングして、json でフロントに反映させたい
-- slackに通知を飛ばしている
+- slack に通知を飛ばしている
 
 # site URL
 
 - https://todo-react-naoya.netlify.app
+
+# branch の切り方
+
+- main
+  - develop
+    - feature/~
+    - hotfix/~
 
 # Getting Started with Create React App
 
