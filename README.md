@@ -31,6 +31,8 @@
     - feature/~ 自動で消える
     - hotfix/~ 自動で消える
 - develop から branch を切る方法が github 上でなら出来るが cui でやる方法がわからない
+  - git branch feature/test12 origin/develop
+  - git checkout -b feature/test12 origin/develop
   - sourcetree からならいける？
     - いけた
 
